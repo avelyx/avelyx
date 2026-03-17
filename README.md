@@ -14,13 +14,9 @@
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&duration=3500&pause=1200&color=8B5CF6&center=true&vCenter=true&multiline=false&repeat=true&width=520&height=30&lines=%24+building+systems+that+think+_;%24+ai+pipelines+%7C+web+design+%7C+cloud+_;%24+zurich%2C+switzerland+_" alt="Typing SVG" />
 </a>
 
-<br><br>
+<br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./links.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./links-light.svg">
-  <img src="./links.svg" alt="links" width="500">
-</picture>
+[`avelyxstudio.ch`](https://avelyxstudio.ch)&#8287;&#8287;·&#8287;&#8287;[`info@avelyxstudio.ch`](mailto:info@avelyxstudio.ch)
 
 </div>
 
