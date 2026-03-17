@@ -64,11 +64,22 @@ const avelyx = {
 
 <br>
 
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=avelyx&layout=donut-vertical&hide_border=true&bg_color=00000000&title_color=8b5cf6&text_color=888888&hide=jupyter%20notebook&langs_count=6" width="280" />
-
-</div>
+```yaml
+stack:
+  ai:
+    - Claude (Opus / Sonnet)
+    - Gemini Pro
+    - Custom 4-Pass Pipelines
+  frontend:
+    - HTML / CSS / JS / GSAP
+    - React / Next.js / Three.js
+  backend:
+    - Node.js / Python / Swift
+    - Supabase / PostgreSQL
+  cloud:
+    - Azure / Hetzner / Docker
+    - M365 / n8n / Remotion
+```
 
 </td>
 </tr>
