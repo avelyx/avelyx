@@ -17,11 +17,11 @@
 <br><br>
 
 <a href="https://avelyxstudio.ch">
-<img src="https://img.shields.io/badge/avelyxstudio.ch-8b5cf6?style=for-the-badge&logo=safari&logoColor=white" />
+<img src="https://img.shields.io/badge/avelyxstudio.ch-8b5cf6?style=flat-square&logoColor=white" />
 </a>
-&#8287;&#8287;
+&#8287;
 <a href="mailto:info@avelyxstudio.ch">
-<img src="https://img.shields.io/badge/info@avelyxstudio.ch-1a1a2e?style=for-the-badge&logo=maildotru&logoColor=white" />
+<img src="https://img.shields.io/badge/info@avelyxstudio.ch-555555?style=flat-square&logoColor=white" />
 </a>
 
 <br>
@@ -74,43 +74,11 @@ I build AI systems that generate production-ready websites, automate cloud infra
 
 <br>
 
-<table align="center">
-<tr>
-<td align="center" width="33%">
-
-**Avelyx Studio**
-<br><br>
-<sub>AI-powered website configurator.<br>Configure. Generate. Launch.</sub>
-<br><br>
-<img src="https://img.shields.io/badge/Claude-191919?style=flat-square&logo=anthropic&logoColor=white" />
-<img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white" />
-<img src="https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white" />
-
-</td>
-<td align="center" width="33%">
-
-**AI Demo Generator**
-<br><br>
-<sub>4-pass pipeline that builds unique<br>production websites from zero.</sub>
-<br><br>
-<img src="https://img.shields.io/badge/Opus-191919?style=flat-square&logo=anthropic&logoColor=white" />
-<img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" />
-<img src="https://img.shields.io/badge/Puppeteer-40B5A4?style=flat-square&logo=puppeteer&logoColor=white" />
-
-</td>
-<td align="center" width="33%">
-
-**Trading Systems**
-<br><br>
-<sub>Algorithmic bot + iOS dashboard.<br>Real-time analytics & execution.</sub>
-<br><br>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" />
-<img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
-
-</td>
-</tr>
-</table>
+| | Project | Description | Stack |
+|:---:|---------|-------------|-------|
+| **01** | **Avelyx Studio** | AI-powered website configurator for Swiss SMBs | `Claude` `Supabase` `Stripe` |
+| **02** | **AI Demo Generator** | 4-pass pipeline — builds unique production sites from zero | `Opus` `n8n` `Puppeteer` |
+| **03** | **Trading Systems** | Algorithmic bot + Swift iOS dashboard | `Python` `Swift` `pandas` |
 
 <br>
 
