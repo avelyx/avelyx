@@ -70,7 +70,7 @@ I build AI systems that generate production-ready websites, automate cloud infra
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./projects.svg">
   <source media="(prefers-color-scheme: light)" srcset="./projects-light.svg">
-  <img src="./projects.svg" alt="projects" width="900">
+  <img src="./projects.svg" alt="projects" width="100%">
 </picture>
 </div>
 

@@ -1,119 +1,200 @@
-<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         .container {
           width: 1200px; height: 300px; background: #0a0a0a;
-          display: flex; flex-direction: column; align-items: center; justify-content: center;
           position: relative; overflow: hidden; font-family: 'Space Grotesk', sans-serif;
         }
-        .bg-mesh {
-          position: absolute; width: 200%; height: 200%; top: -50%; left: -50%;
-          background:
-            radial-gradient(ellipse 600px 300px at 20% 50%, rgba(99,102,241,0.08) 0%, transparent 70%),
-            radial-gradient(ellipse 500px 250px at 80% 30%, rgba(139,92,246,0.06) 0%, transparent 70%),
-            radial-gradient(ellipse 400px 200px at 60% 80%, rgba(59,130,246,0.05) 0%, transparent 70%);
-          animation: meshFloat 20s ease-in-out infinite;
+
+        /* ══════ TANGLE — using simple absolute positioned divs ══════ */
+
+        /* Particles */
+        .p {
+          position: absolute;
+          border-radius: 50%;
+          background-color: rgba(139,92,246,0.6);
         }
-        @keyframes meshFloat {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          25% { transform: translate(30px, -20px) rotate(1deg); }
-          50% { transform: translate(-20px, 15px) rotate(-1deg); }
-          75% { transform: translate(15px, 25px) rotate(0.5deg); }
+
+        /* Lines */
+        .l {
+          position: absolute;
+          height: 1px;
+          transform-origin: 0 50%;
+          background-color: rgba(139,92,246,0.2);
         }
-        .grid {
-          position: absolute; width: 100%; height: 100%;
-          background-image:
-            linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-          background-size: 60px 60px;
-          animation: gridPulse 8s ease-in-out infinite;
+
+        /* ── LEFT cluster particles ── */
+        .p1  { width: 22px; height: 22px; top: 30px; left: 70px; background-color: rgba(139,92,246,0.8); animation: f1 16s ease-in-out infinite; }
+        .p2  { width: 14px; height: 14px; top: 90px; left: 175px; background-color: rgba(93,173,226,0.7); animation: f2 20s ease-in-out infinite; }
+        .p3  { width: 10px; height: 10px; top: 30px; left: 250px; background-color: rgba(168,216,240,0.6); animation: f3 18s ease-in-out infinite; }
+        .p4  { width: 16px; height: 16px; top: 168px; left: 130px; background-color: rgba(139,92,246,0.7); animation: f4 22s ease-in-out infinite; }
+        .p5  { width: 10px; height: 10px; top: 235px; left: 50px; background-color: rgba(93,173,226,0.5); animation: f5 21s ease-in-out infinite; }
+        .p6  { width: 18px; height: 18px; top: 115px; left: 330px; background-color: rgba(93,173,226,0.75); animation: f6 17s ease-in-out infinite; }
+        .p7  { width: 10px; height: 10px; top: 48px; left: 410px; background-color: rgba(168,216,240,0.5); animation: f7 19s ease-in-out infinite; }
+        .p8  { width: 12px; height: 12px; top: 220px; left: 260px; background-color: rgba(93,173,226,0.5); animation: f8 23s ease-in-out infinite; }
+
+        /* ── RIGHT cluster particles ── */
+        .p9  { width: 24px; height: 24px; top: 28px; left: 760px; background-color: rgba(139,92,246,0.8); animation: f9 18s ease-in-out infinite; }
+        .p10 { width: 14px; height: 14px; top: 78px; left: 858px; background-color: rgba(93,173,226,0.7); animation: f10 15s ease-in-out infinite; }
+        .p11 { width: 10px; height: 10px; top: 28px; left: 948px; background-color: rgba(168,216,240,0.6); animation: f11 19s ease-in-out infinite; }
+        .p12 { width: 18px; height: 18px; top: 60px; left: 1060px; background-color: rgba(168,216,240,0.75); animation: f12 17s ease-in-out infinite; }
+        .p13 { width: 14px; height: 14px; top: 158px; left: 905px; background-color: rgba(93,173,226,0.6); animation: f13 21s ease-in-out infinite; }
+        .p14 { width: 16px; height: 16px; top: 190px; left: 1025px; background-color: rgba(139,92,246,0.6); animation: f14 18s ease-in-out infinite; }
+        .p15 { width: 10px; height: 10px; top: 238px; left: 818px; background-color: rgba(139,92,246,0.5); animation: f15 20s ease-in-out infinite; }
+        .p16 { width: 12px; height: 12px; top: 248px; left: 1108px; background-color: rgba(93,173,226,0.5); animation: f16 16s ease-in-out infinite; }
+
+        /* ── BOTTOM bridge particles ── */
+        .p17 { width: 10px; height: 10px; top: 255px; left: 468px; background-color: rgba(139,92,246,0.4); animation: f17 24s ease-in-out infinite; }
+        .p18 { width: 10px; height: 10px; top: 258px; left: 668px; background-color: rgba(93,173,226,0.4); animation: f18 19s ease-in-out infinite; }
+
+        /* ── Ambient ── */
+        .p19 { width: 6px; height: 6px; top: 18px;  left: 512px; background-color: rgba(139,92,246,0.3); animation: f19 28s ease-in-out infinite; }
+        .p20 { width: 6px; height: 6px; top: 145px; left: 592px; background-color: rgba(93,173,226,0.25); animation: f20 26s ease-in-out infinite; }
+        .p21 { width: 6px; height: 6px; top: 192px; left: 702px; background-color: rgba(168,216,240,0.25); animation: f21 23s ease-in-out infinite; }
+        .p22 { width: 6px; height: 6px; top: 265px; left: 382px; background-color: rgba(139,92,246,0.25); animation: f22 25s ease-in-out infinite; }
+
+        /* ── Float keyframes ── */
+        @keyframes f1  { 0%,100%{transform:translate(0,0)}25%{transform:translate(15px,-20px)}50%{transform:translate(25px,-10px)}75%{transform:translate(10px,8px)} }
+        @keyframes f2  { 0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-18px)} }
+        @keyframes f3  { 0%,100%{transform:translate(0,0)}50%{transform:translate(-18px,20px)} }
+        @keyframes f4  { 0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-15px)} }
+        @keyframes f5  { 0%,100%{transform:translate(0,0)}50%{transform:translate(22px,-18px)} }
+        @keyframes f6  { 0%,100%{transform:translate(0,0)}25%{transform:translate(-15px,12px)}50%{transform:translate(-20px,20px)}75%{transform:translate(-8px,5px)} }
+        @keyframes f7  { 0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-15px)} }
+        @keyframes f8  { 0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,20px)} }
+        @keyframes f9  { 0%,100%{transform:translate(0,0)}25%{transform:translate(20px,-18px)}50%{transform:translate(15px,-25px)}75%{transform:translate(25px,-8px)} }
+        @keyframes f10 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-18px,20px)} }
+        @keyframes f11 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,18px)} }
+        @keyframes f12 { 0%,100%{transform:translate(0,0)}25%{transform:translate(-18px,15px)}50%{transform:translate(-12px,22px)}75%{transform:translate(-20px,8px)} }
+        @keyframes f13 { 0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-18px)} }
+        @keyframes f14 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,18px)} }
+        @keyframes f15 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,20px)} }
+        @keyframes f16 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-18px,-15px)} }
+        @keyframes f17 { 0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-18px)} }
+        @keyframes f18 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-18px,20px)} }
+        @keyframes f19 { 0%,100%{transform:translate(0,0)}50%{transform:translate(18px,15px)} }
+        @keyframes f20 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,18px)} }
+        @keyframes f21 { 0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-15px)} }
+        @keyframes f22 { 0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-12px)} }
+
+        /* ══════ CONNECTION LINES ══════ */
+        /* LEFT */
+        .l1  { top: 48px;  left: 83px;  width: 108px; height: 2px; background-color: rgba(139,92,246,0.3); transform: rotate(28deg); }
+        .l2  { top: 100px; left: 183px; width: 85px;  height: 2px; background-color: rgba(93,173,226,0.25); transform: rotate(-40deg); }
+        .l3  { top: 48px;  left: 83px;  width: 148px; height: 2px; background-color: rgba(139,92,246,0.25); transform: rotate(62deg); }
+        .l4  { top: 178px; left: 140px; width: 118px; height: 2px; background-color: rgba(139,92,246,0.2); transform: rotate(26deg); }
+        .l5  { top: 40px;  left: 255px; width: 118px; height: 2px; background-color: rgba(168,216,240,0.28); transform: rotate(46deg); }
+        .l6  { top: 128px; left: 340px; width: 102px; height: 2px; background-color: rgba(93,173,226,0.22); transform: rotate(-48deg); }
+        .l7  { top: 100px; left: 183px; width: 168px; height: 2px; background-color: rgba(139,92,246,0.15); transform: rotate(10deg); }
+        .l8  { top: 178px; left: 142px; width: 142px; height: 2px; background-color: rgba(93,173,226,0.2); transform: rotate(20deg); }
+        .l9  { top: 128px; left: 340px; width: 135px; height: 2px; background-color: rgba(168,216,240,0.15); transform: rotate(48deg); }
+
+        /* RIGHT */
+        .l10 { top: 42px;  left: 775px; width: 102px; height: 2px; background-color: rgba(139,92,246,0.3); transform: rotate(24deg); }
+        .l11 { top: 88px;  left: 868px; width: 100px; height: 2px; background-color: rgba(93,173,226,0.25); transform: rotate(-32deg); }
+        .l12 { top: 38px;  left: 958px; width: 120px; height: 2px; background-color: rgba(168,216,240,0.25); transform: rotate(15deg); }
+        .l13 { top: 88px;  left: 868px; width: 92px;  height: 2px; background-color: rgba(93,173,226,0.28); transform: rotate(58deg); }
+        .l14 { top: 168px; left: 915px; width: 128px; height: 2px; background-color: rgba(139,92,246,0.2); transform: rotate(15deg); }
+        .l15 { top: 72px;  left: 1072px; width: 138px; height: 2px; background-color: rgba(168,216,240,0.15); transform: rotate(72deg); }
+        .l16 { top: 42px;  left: 775px; width: 205px; height: 2px; background-color: rgba(139,92,246,0.12); transform: rotate(72deg); }
+        .l17 { top: 248px; left: 828px; width: 220px; height: 2px; background-color: rgba(139,92,246,0.2); transform: rotate(-5deg); }
+        .l18 { top: 200px; left: 1035px; width: 105px; height: 2px; background-color: rgba(168,216,240,0.15); transform: rotate(32deg); }
+
+        /* BOTTOM */
+        .l19 { top: 242px; left: 60px;  width: 420px; height: 2px; background-color: rgba(139,92,246,0.08); transform: rotate(3deg); }
+        .l20 { top: 230px; left: 270px; width: 210px; height: 2px; background-color: rgba(93,173,226,0.1); transform: rotate(8deg); }
+        .l21 { top: 262px; left: 478px; width: 205px; height: 2px; background-color: rgba(139,92,246,0.12); transform: rotate(1deg); }
+        .l22 { top: 265px; left: 678px; width: 155px; height: 2px; background-color: rgba(93,173,226,0.1); transform: rotate(-8deg); }
+
+        /* ══════ TITLE ══════ */
+        .title-wrap {
+          position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+          display: flex; flex-direction: column; align-items: center; justify-content: center;
+          z-index: 2;
         }
-        @keyframes gridPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.7; } }
-        .particle {
-          position: absolute; width: 3px; height: 3px; border-radius: 50%;
-          background: rgba(139,92,246,0.4);
-        }
-        .p1 { top: 20%; left: 10%; animation: float1 12s ease-in-out infinite; }
-        .p2 { top: 60%; left: 25%; animation: float2 15s ease-in-out infinite; background: rgba(59,130,246,0.3); width: 2px; height: 2px; }
-        .p3 { top: 30%; left: 70%; animation: float3 10s ease-in-out infinite; background: rgba(99,102,241,0.5); width: 4px; height: 4px; }
-        .p4 { top: 75%; left: 85%; animation: float1 18s ease-in-out infinite reverse; background: rgba(168,85,247,0.3); }
-        .p5 { top: 45%; left: 50%; animation: float2 14s ease-in-out infinite; background: rgba(99,102,241,0.2); width: 5px; height: 5px; }
-        .p6 { top: 15%; left: 90%; animation: float3 16s ease-in-out infinite; background: rgba(59,130,246,0.4); width: 2px; height: 2px; }
-        .p7 { top: 80%; left: 40%; animation: float1 11s ease-in-out infinite; background: rgba(139,92,246,0.3); }
-        @keyframes float1 {
-          0%, 100% { transform: translate(0, 0); opacity: 0.3; }
-          50% { transform: translate(40px, -30px); opacity: 1; }
-        }
-        @keyframes float2 {
-          0%, 100% { transform: translate(0, 0); opacity: 0.5; }
-          33% { transform: translate(-25px, 20px); opacity: 0.8; }
-          66% { transform: translate(30px, -15px); opacity: 0.3; }
-        }
-        @keyframes float3 {
-          0%, 100% { transform: translate(0, 0); opacity: 0.4; }
-          50% { transform: translate(-35px, 25px); opacity: 1; }
-        }
-        .title-wrap { position: relative; z-index: 2; text-align: center; }
         .title-letters { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 20px; }
         .letter {
           font-size: 52px; font-weight: 700; color: #ffffff;
           letter-spacing: 0.05em; opacity: 0;
-          animation: letterReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          animation: letterReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
         .letter:nth-child(1) { animation-delay: 0.3s; }
-        .letter:nth-child(3) { animation-delay: 0.45s; }
-        .letter:nth-child(5) { animation-delay: 0.6s; }
-        .letter:nth-child(7) { animation-delay: 0.75s; }
-        .letter:nth-child(9) { animation-delay: 0.9s; }
-        .letter:nth-child(11) { animation-delay: 1.05s; }
+        .letter:nth-child(3) { animation-delay: 0.5s; }
+        .letter:nth-child(5) { animation-delay: 0.7s; }
+        .letter:nth-child(7) { animation-delay: 0.9s; }
+        .letter:nth-child(9) { animation-delay: 1.1s; }
+        .letter:nth-child(11) { animation-delay: 1.3s; }
+        @keyframes letterReveal {
+          0% { opacity: 0; transform: translateY(30px) scale(0.8); filter: blur(10px); }
+          60% { opacity: 1; transform: translateY(-5px) scale(1.02); filter: blur(0); }
+          100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+        }
         .dot {
           font-size: 18px; color: rgba(139,92,246,0.6);
-          opacity: 0; animation: dotReveal 0.4s ease forwards;
+          opacity: 0; animation: dotReveal 0.5s ease forwards;
         }
-        .dot:nth-child(2) { animation-delay: 0.38s; }
-        .dot:nth-child(4) { animation-delay: 0.53s; }
-        .dot:nth-child(6) { animation-delay: 0.68s; }
-        .dot:nth-child(8) { animation-delay: 0.83s; }
-        .dot:nth-child(10) { animation-delay: 0.98s; }
-        @keyframes letterReveal {
-          from { opacity: 0; transform: translateY(30px) scale(0.8); filter: blur(10px); }
-          to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-        }
+        .dot:nth-child(2) { animation-delay: 0.4s; }
+        .dot:nth-child(4) { animation-delay: 0.6s; }
+        .dot:nth-child(6) { animation-delay: 0.8s; }
+        .dot:nth-child(8) { animation-delay: 1.0s; }
+        .dot:nth-child(10) { animation-delay: 1.2s; }
         @keyframes dotReveal {
           from { opacity: 0; transform: scale(0); }
           to { opacity: 1; transform: scale(1); }
         }
+        .accent-line {
+          width: 0; height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(139,92,246,0.6), transparent);
+          margin: 16px auto;
+          animation: lineExpand 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards;
+        }
+        @keyframes lineExpand { to { width: 240px; } }
         .subtitle {
           font-family: 'JetBrains Mono', monospace; font-size: 14px;
           color: rgba(255,255,255,0.35); letter-spacing: 0.3em;
           text-transform: uppercase; opacity: 0;
-          animation: fadeSlideUp 1s ease 1.4s forwards;
+          animation: fadeSlideUp 1s ease 1.8s forwards;
+          display: flex; align-items: center; justify-content: center; gap: 4px;
         }
+        .cursor {
+          display: inline-block; width: 2px; height: 14px;
+          background-color: rgba(139,92,246,0.6);
+          animation: blink 1s step-end infinite;
+          margin-left: 4px;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(15px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        .accent-line {
-          width: 0; height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(139,92,246,0.5), transparent);
-          margin: 16px auto;
-          animation: lineExpand 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
-        }
-        @keyframes lineExpand { to { width: 200px; } }
       </style>
+
       <div class="container">
-        <div class="bg-mesh"></div>
-        <div class="grid"></div>
-        <div class="particle p1"></div>
-        <div class="particle p2"></div>
-        <div class="particle p3"></div>
-        <div class="particle p4"></div>
-        <div class="particle p5"></div>
-        <div class="particle p6"></div>
-        <div class="particle p7"></div>
+        <!-- LINES first (behind dots) -->
+        <div class="l l1"></div><div class="l l2"></div><div class="l l3"></div>
+        <div class="l l4"></div><div class="l l5"></div><div class="l l6"></div>
+        <div class="l l7"></div><div class="l l8"></div><div class="l l9"></div>
+        <div class="l l10"></div><div class="l l11"></div><div class="l l12"></div>
+        <div class="l l13"></div><div class="l l14"></div><div class="l l15"></div>
+        <div class="l l16"></div><div class="l l17"></div><div class="l l18"></div>
+        <div class="l l19"></div><div class="l l20"></div><div class="l l21"></div>
+        <div class="l l22"></div>
+
+        <!-- PARTICLES on top of lines -->
+        <div class="p p1"></div><div class="p p2"></div><div class="p p3"></div>
+        <div class="p p4"></div><div class="p p5"></div><div class="p p6"></div>
+        <div class="p p7"></div><div class="p p8"></div><div class="p p9"></div>
+        <div class="p p10"></div><div class="p p11"></div><div class="p p12"></div>
+        <div class="p p13"></div><div class="p p14"></div><div class="p p15"></div>
+        <div class="p p16"></div><div class="p p17"></div><div class="p p18"></div>
+        <div class="p p19"></div><div class="p p20"></div><div class="p p21"></div>
+        <div class="p p22"></div>
+
+        <!-- TITLE overlay -->
         <div class="title-wrap">
           <div class="title-letters">
             <span class="letter">A</span>
@@ -129,7 +210,10 @@
             <span class="letter">X</span>
           </div>
           <div class="accent-line"></div>
-          <div class="subtitle">ai builder &#183; cloud architect &#183; designer</div>
+          <div class="subtitle">
+            ai builder &#183; cloud architect &#183; designer
+            <span class="cursor"></span>
+          </div>
         </div>
       </div>
     </div>

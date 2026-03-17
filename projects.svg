@@ -1,11 +1,11 @@
-<svg width="900" height="320" viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 900 340" fill="none" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
         .container {
-          width: 900px; height: 320px;
+          width: 100%; height: 340px;
           display: flex; gap: 16px; padding: 16px;
           font-family: 'Space Grotesk', sans-serif;
           background: transparent;
@@ -20,29 +20,43 @@
           position: relative;
           overflow: hidden;
           opacity: 0;
-          animation: cardIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          animation: cardIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
         .card:nth-child(1) { animation-delay: 0.1s; }
-        .card:nth-child(2) { animation-delay: 0.25s; }
-        .card:nth-child(3) { animation-delay: 0.4s; }
+        .card:nth-child(2) { animation-delay: 0.3s; }
+        .card:nth-child(3) { animation-delay: 0.5s; }
         @keyframes cardIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
+          0% { opacity: 0; transform: translateY(30px) scale(0.95); }
+          60% { opacity: 1; transform: translateY(-3px) scale(1.01); }
+          100% { opacity: 1; transform: translateY(0) scale(1); }
         }
+        /* Top border glow line */
         .card::before {
           content: '';
           position: absolute; top: 0; left: 0; right: 0;
           height: 2px;
-          background: linear-gradient(90deg, transparent, rgba(139,92,246,0.4), transparent);
           opacity: 0;
           animation: lineIn 0.8s ease 0.8s forwards;
         }
-        @keyframes lineIn {
-          to { opacity: 1; }
+        @keyframes lineIn { to { opacity: 1; } }
+        .card:nth-child(1)::before { background: linear-gradient(90deg, transparent, rgba(139,92,246,0.6), transparent); }
+        .card:nth-child(2)::before { background: linear-gradient(90deg, transparent, rgba(59,130,246,0.6), transparent); }
+        .card:nth-child(3)::before { background: linear-gradient(90deg, transparent, rgba(16,185,129,0.6), transparent); }
+        /* Subtle corner glow per card */
+        .card::after {
+          content: '';
+          position: absolute; top: -40px; right: -40px;
+          width: 120px; height: 120px; border-radius: 50%;
+          opacity: 0;
+          animation: glowIn 1.5s ease 1s forwards;
         }
-        .card:nth-child(1)::before { background: linear-gradient(90deg, transparent, rgba(139,92,246,0.5), transparent); }
-        .card:nth-child(2)::before { background: linear-gradient(90deg, transparent, rgba(59,130,246,0.5), transparent); }
-        .card:nth-child(3)::before { background: linear-gradient(90deg, transparent, rgba(16,185,129,0.5), transparent); }
+        .card:nth-child(1)::after { background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%); }
+        .card:nth-child(2)::after { background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%); }
+        .card:nth-child(3)::after { background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%); }
+        @keyframes glowIn {
+          from { opacity: 0; transform: scale(0.5); }
+          to { opacity: 1; transform: scale(1); }
+        }
         .num {
           font-family: 'JetBrains Mono', monospace;
           font-size: 11px;
@@ -59,7 +73,7 @@
         .desc {
           font-size: 13px;
           color: rgba(255,255,255,0.35);
-          line-height: 1.5;
+          line-height: 1.6;
           flex: 1;
         }
         .tags {
@@ -69,19 +83,54 @@
         .tag {
           font-family: 'JetBrains Mono', monospace;
           font-size: 10px;
-          color: rgba(255,255,255,0.3);
           background: rgba(255,255,255,0.04);
           border: 1px solid rgba(255,255,255,0.06);
           border-radius: 4px;
-          padding: 3px 8px;
+          padding: 4px 10px;
           letter-spacing: 0.05em;
+          opacity: 0;
+          animation: tagIn 0.4s ease forwards;
         }
         .card:nth-child(1) .tag { border-color: rgba(139,92,246,0.15); color: rgba(139,92,246,0.5); }
         .card:nth-child(2) .tag { border-color: rgba(59,130,246,0.15); color: rgba(59,130,246,0.5); }
         .card:nth-child(3) .tag { border-color: rgba(16,185,129,0.15); color: rgba(16,185,129,0.5); }
+        .tag:nth-child(1) { animation-delay: 1.0s; }
+        .tag:nth-child(2) { animation-delay: 1.1s; }
+        .tag:nth-child(3) { animation-delay: 1.2s; }
+        .tag:nth-child(4) { animation-delay: 1.3s; }
+        @keyframes tagIn {
+          from { opacity: 0; transform: translateX(-8px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        /* Status dot */
+        .status {
+          display: flex; align-items: center; gap: 6px;
+          margin-bottom: 16px;
+        }
+        .status-dot {
+          width: 6px; height: 6px; border-radius: 50%;
+          animation: pulse 2s ease-in-out infinite;
+        }
+        .card:nth-child(1) .status-dot { background: rgba(139,92,246,0.6); }
+        .card:nth-child(2) .status-dot { background: rgba(59,130,246,0.6); }
+        .card:nth-child(3) .status-dot { background: rgba(16,185,129,0.6); }
+        @keyframes pulse {
+          0%, 100% { opacity: 0.4; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.3); }
+        }
+        .status-text {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 9px; text-transform: uppercase;
+          letter-spacing: 0.15em;
+          color: rgba(255,255,255,0.2);
+        }
       </style>
       <div class="container">
         <div class="card">
+          <div class="status">
+            <div class="status-dot"></div>
+            <span class="status-text">Active</span>
+          </div>
           <div class="num">01</div>
           <div class="title">Avelyx Studio</div>
           <div class="desc">AI-powered website configurator for Swiss SMBs. Configure, generate, and launch in minutes.</div>
@@ -93,6 +142,10 @@
           </div>
         </div>
         <div class="card">
+          <div class="status">
+            <div class="status-dot"></div>
+            <span class="status-text">Active</span>
+          </div>
           <div class="num">02</div>
           <div class="title">AI Demo Generator</div>
           <div class="desc">4-pass AI pipeline that builds unique production websites from zero. Blueprint to pixel-perfect.</div>
@@ -104,6 +157,10 @@
           </div>
         </div>
         <div class="card">
+          <div class="status">
+            <div class="status-dot"></div>
+            <span class="status-text">Active</span>
+          </div>
           <div class="num">03</div>
           <div class="title">Trading Systems</div>
           <div class="desc">Algorithmic trading bot with real-time analytics and a native Swift iOS dashboard.</div>
