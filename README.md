@@ -16,15 +16,11 @@
 
 <br><br>
 
-<a href="https://avelyxstudio.ch">
-<img src="https://img.shields.io/badge/avelyxstudio.ch-8b5cf6?style=flat-square&logoColor=white" />
-</a>
-&#8287;
-<a href="mailto:info@avelyxstudio.ch">
-<img src="https://img.shields.io/badge/info@avelyxstudio.ch-555555?style=flat-square&logoColor=white" />
-</a>
-
-<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./links.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./links-light.svg">
+  <img src="./links.svg" alt="links" width="500">
+</picture>
 
 </div>
 
@@ -74,11 +70,13 @@ I build AI systems that generate production-ready websites, automate cloud infra
 
 <br>
 
-| | Project | Description | Stack |
-|:---:|---------|-------------|-------|
-| **01** | **Avelyx Studio** | AI-powered website configurator for Swiss SMBs | `Claude` `Supabase` `Stripe` |
-| **02** | **AI Demo Generator** | 4-pass pipeline — builds unique production sites from zero | `Opus` `n8n` `Puppeteer` |
-| **03** | **Trading Systems** | Algorithmic bot + Swift iOS dashboard | `Python` `Swift` `pandas` |
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./projects.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./projects-light.svg">
+  <img src="./projects.svg" alt="projects" width="900">
+</picture>
+</div>
 
 <br>
 

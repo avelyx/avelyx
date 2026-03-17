@@ -1,0 +1,54 @@
+<svg width="500" height="50" viewBox="0 0 500 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .wrap {
+          width: 500px; height: 50px;
+          display: flex; align-items: center; justify-content: center; gap: 32px;
+          font-family: 'JetBrains Mono', monospace;
+          background: transparent;
+        }
+        .link {
+          display: flex; align-items: center; gap: 8px;
+          font-size: 13px; color: rgba(109,62,216,0.7);
+          letter-spacing: 0.05em;
+          animation: fadeIn 1s ease forwards;
+          opacity: 0;
+        }
+        .link:nth-child(1) { animation-delay: 0.2s; }
+        .link:nth-child(2) { animation-delay: 0.3s; }
+        .link:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(5px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .dot {
+          width: 6px; height: 6px; border-radius: 50%;
+          background: rgba(109,62,216,0.4);
+        }
+        .sep {
+          width: 1px; height: 16px;
+          background: rgba(0,0,0,0.1);
+        }
+      </style>
+      <div class="wrap">
+        <div class="link">
+          <div class="dot"></div>
+          avelyxstudio.ch
+        </div>
+        <div class="sep"></div>
+        <div class="link">
+          <div class="dot"></div>
+          info@avelyxstudio.ch
+        </div>
+        <div class="sep"></div>
+        <div class="link">
+          <div class="dot"></div>
+          zurich, switzerland
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

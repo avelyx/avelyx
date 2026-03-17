@@ -1,0 +1,106 @@
+<svg width="900" height="320" viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .container {
+          width: 900px; height: 320px;
+          display: flex; gap: 16px; padding: 16px;
+          font-family: 'Space Grotesk', sans-serif;
+          background: transparent;
+        }
+        .card {
+          flex: 1;
+          background: rgba(0,0,0,0.015);
+          border: 1px solid rgba(0,0,0,0.08);
+          border-radius: 16px;
+          padding: 28px 24px;
+          display: flex; flex-direction: column;
+          position: relative;
+          overflow: hidden;
+          opacity: 0;
+          animation: cardIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.25s; }
+        .card:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes cardIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .card::before {
+          content: '';
+          position: absolute; top: 0; left: 0; right: 0;
+          height: 2px;
+          opacity: 0;
+          animation: lineIn 0.8s ease 0.8s forwards;
+        }
+        @keyframes lineIn { to { opacity: 1; } }
+        .card:nth-child(1)::before { background: linear-gradient(90deg, transparent, rgba(109,62,216,0.5), transparent); }
+        .card:nth-child(2)::before { background: linear-gradient(90deg, transparent, rgba(37,99,235,0.5), transparent); }
+        .card:nth-child(3)::before { background: linear-gradient(90deg, transparent, rgba(5,150,105,0.5), transparent); }
+        .num {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 11px; color: rgba(0,0,0,0.15);
+          letter-spacing: 0.1em; margin-bottom: 16px;
+        }
+        .title {
+          font-size: 18px; font-weight: 600;
+          color: rgba(0,0,0,0.85);
+          margin-bottom: 10px; letter-spacing: -0.01em;
+        }
+        .desc {
+          font-size: 13px; color: rgba(0,0,0,0.45);
+          line-height: 1.5; flex: 1;
+        }
+        .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
+        .tag {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 10px; background: rgba(0,0,0,0.03);
+          border: 1px solid rgba(0,0,0,0.08);
+          border-radius: 4px; padding: 3px 8px;
+          letter-spacing: 0.05em;
+        }
+        .card:nth-child(1) .tag { border-color: rgba(109,62,216,0.2); color: rgba(109,62,216,0.7); }
+        .card:nth-child(2) .tag { border-color: rgba(37,99,235,0.2); color: rgba(37,99,235,0.7); }
+        .card:nth-child(3) .tag { border-color: rgba(5,150,105,0.2); color: rgba(5,150,105,0.7); }
+      </style>
+      <div class="container">
+        <div class="card">
+          <div class="num">01</div>
+          <div class="title">Avelyx Studio</div>
+          <div class="desc">AI-powered website configurator for Swiss SMBs. Configure, generate, and launch in minutes.</div>
+          <div class="tags">
+            <span class="tag">Claude</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Stripe</span>
+            <span class="tag">GSAP</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="num">02</div>
+          <div class="title">AI Demo Generator</div>
+          <div class="desc">4-pass AI pipeline that builds unique production websites from zero. Blueprint to pixel-perfect.</div>
+          <div class="tags">
+            <span class="tag">Opus</span>
+            <span class="tag">Sonnet</span>
+            <span class="tag">n8n</span>
+            <span class="tag">Puppeteer</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="num">03</div>
+          <div class="title">Trading Systems</div>
+          <div class="desc">Algorithmic trading bot with real-time analytics and a native Swift iOS dashboard.</div>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Swift</span>
+            <span class="tag">pybit</span>
+            <span class="tag">pandas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
