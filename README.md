@@ -38,146 +38,48 @@
 
 <br>
 
-<!-- ABOUT SECTION -->
-<table align="center" border="0" cellpadding="0" cellspacing="0">
-<tr>
-<td width="55%" valign="top">
-
-<br>
-
-```js
-const avelyx = {
-  location: "Zurich, Switzerland",
-  focus: [
-    "AI-Powered Web Development",
-    "Cloud Architecture & Automation",
-    "Algorithmic Trading Systems"
-  ],
-  currently: "Building AI pipelines that
-               generate production websites",
-  philosophy: "Ship fast. Design slow."
-};
-```
-
-</td>
-<td width="45%" valign="top">
-
-<br>
-
-```yaml
-stack:
-  ai:
-    - Claude (Opus / Sonnet)
-    - Gemini Pro
-    - Custom 4-Pass Pipelines
-  frontend:
-    - HTML / CSS / JS / GSAP
-    - React / Next.js / Three.js
-  backend:
-    - Node.js / Python / Swift
-    - Supabase / PostgreSQL
-  cloud:
-    - Azure / Hetzner / Docker
-    - M365 / n8n / Remotion
-```
-
-</td>
-</tr>
-</table>
-
-<br>
-
-<!-- DIVIDER -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<br>
-
-<!-- TECH STACK -->
+<!-- ABOUT -->
 <div align="center">
 
 <br>
 
-**`>_ tech stack`**
+Swiss developer building at the intersection of **AI**, **design**, and **cloud infrastructure**.
+<br>
+I craft systems that think — from AI pipelines generating production websites to algorithmic trading bots.
+
+<br><br>
+
+**`>_ tech`**
 
 <br>
 
-<table border="0" cellpadding="0" cellspacing="0">
-<tr>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=html" width="40" /><br>
-<sub><b>HTML</b></sub><br><br>
-</td>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=css" width="40" /><br>
-<sub><b>CSS</b></sub><br><br>
-</td>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=js" width="40" /><br>
-<sub><b>JavaScript</b></sub><br><br>
-</td>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=ts" width="40" /><br>
-<sub><b>TypeScript</b></sub><br><br>
-</td>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=react" width="40" /><br>
-<sub><b>React</b></sub><br><br>
-</td>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=nextjs" width="40" /><br>
-<sub><b>Next.js</b></sub><br><br>
-</td>
-</tr>
-<tr>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=python" width="40" /><br>
-<sub><b>Python</b></sub><br><br>
-</td>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=nodejs" width="40" /><br>
-<sub><b>Node.js</b></sub><br><br>
-</td>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=supabase" width="40" /><br>
-<sub><b>Supabase</b></sub><br><br>
-</td>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=docker" width="40" /><br>
-<sub><b>Docker</b></sub><br><br>
-</td>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=azure" width="40" /><br>
-<sub><b>Azure</b></sub><br><br>
-</td>
-<td align="center" width="140">
-<br>
-<img src="https://skillicons.dev/icons?i=figma" width="40" /><br>
-<sub><b>Figma</b></sub><br><br>
-</td>
-</tr>
-</table>
+<!-- AI & Core -->
+<img src="https://img.shields.io/badge/Claude-191919?style=for-the-badge&logo=anthropic&logoColor=white" />
+<img src="https://img.shields.io/badge/Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" />
+<img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" />
 
 <br>
 
-<img src="https://img.shields.io/badge/Claude_API-191919?style=flat-square&logo=anthropic&logoColor=white" />
-<img src="https://img.shields.io/badge/Gemini-4285F4?style=flat-square&logo=google&logoColor=white" />
+<!-- Frontend -->
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs&theme=dark" />
+
+<br>
+
+<!-- Backend & Cloud -->
+<img src="https://skillicons.dev/icons?i=nodejs,python,swift,supabase,postgres,docker&theme=dark" />
+
+<br>
+
+<!-- Infra & Design -->
+<img src="https://skillicons.dev/icons?i=azure,linux,figma,threejs,github,vscode&theme=dark" />
+
+<br><br>
+
 <img src="https://img.shields.io/badge/GSAP-88CE02?style=flat-square&logo=greensock&logoColor=black" />
-<img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" />
-<img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" />
 <img src="https://img.shields.io/badge/Hetzner-D50C2D?style=flat-square&logo=hetzner&logoColor=white" />
 <img src="https://img.shields.io/badge/Remotion-5B37B7?style=flat-square&logo=react&logoColor=white" />
-<img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" />
+<img src="https://img.shields.io/badge/M365-0078D4?style=flat-square&logo=microsoft&logoColor=white" />
+<img src="https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white" />
 
 </div>
 
