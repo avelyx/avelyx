@@ -1,130 +1,20 @@
-<svg width="100%" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         .container {
           width: 1200px; height: 300px; background: #fafafa;
           display: flex; flex-direction: column; align-items: center; justify-content: center;
           position: relative; overflow: hidden; font-family: 'Space Grotesk', sans-serif;
         }
-
-        /* ══════ TANGLE NETWORK ══════ */
-        .tangle { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
-
-        .td {
-          position: absolute; border-radius: 50%;
-          background: rgba(109,62,216,0.4);
-        }
-        .td.star {
-          box-shadow: 0 0 8px rgba(109,62,216,0.2), 0 0 20px rgba(109,62,216,0.08);
-        }
-        .tl {
-          position: absolute; height: 1px;
-          transform-origin: 0 50%;
-          opacity: 0;
-          animation: lineReveal 2s ease forwards;
-        }
-        @keyframes lineReveal { to { opacity: 1; } }
-
-        /* ── LEFT CLUSTER dots ── */
-        .td1 { width: 5px; height: 5px; top: 52px; left: 92px; animation: drift1 18s ease-in-out infinite; }
-        .td2 { width: 3px; height: 3px; top: 93px; left: 182px; animation: drift2 22s ease-in-out infinite; background: rgba(37,99,235,0.4); }
-        .td3 { width: 2px; height: 2px; top: 43px; left: 258px; animation: drift3 20s ease-in-out infinite; background: rgba(109,62,216,0.3); }
-        .td4 { width: 4px; height: 4px; top: 178px; left: 148px; animation: drift4 25s ease-in-out infinite; }
-        .td5 { width: 2px; height: 2px; top: 228px; left: 53px; animation: drift5 24s ease-in-out infinite; background: rgba(37,99,235,0.3); }
-        .td6 { width: 4px; height: 4px; top: 128px; left: 348px; animation: drift6 19s ease-in-out infinite; background: rgba(37,99,235,0.4); }
-        .td7 { width: 2px; height: 2px; top: 58px; left: 418px; animation: drift7 21s ease-in-out infinite; }
-        .td8 { width: 3px; height: 3px; top: 228px; left: 278px; animation: drift8 23s ease-in-out infinite; background: rgba(37,99,235,0.3); }
-
-        /* ── RIGHT CLUSTER dots ── */
-        .td9 { width: 6px; height: 6px; top: 48px; left: 778px; animation: drift9 20s ease-in-out infinite; }
-        .td10 { width: 3px; height: 3px; top: 88px; left: 868px; animation: drift10 17s ease-in-out infinite; background: rgba(37,99,235,0.4); }
-        .td11 { width: 2px; height: 2px; top: 38px; left: 958px; animation: drift11 21s ease-in-out infinite; background: rgba(109,62,216,0.3); }
-        .td12 { width: 4px; height: 4px; top: 73px; left: 1078px; animation: drift12 19s ease-in-out infinite; }
-        .td13 { width: 3px; height: 3px; top: 168px; left: 918px; animation: drift13 23s ease-in-out infinite; background: rgba(37,99,235,0.3); }
-        .td14 { width: 4px; height: 4px; top: 198px; left: 1038px; animation: drift14 20s ease-in-out infinite; background: rgba(109,62,216,0.3); }
-        .td15 { width: 2px; height: 2px; top: 238px; left: 828px; animation: drift15 22s ease-in-out infinite; }
-        .td16 { width: 3px; height: 3px; top: 258px; left: 1118px; animation: drift16 18s ease-in-out infinite; background: rgba(37,99,235,0.3); }
-
-        /* ── BOTTOM scattered dots ── */
-        .td17 { width: 2px; height: 2px; top: 258px; left: 478px; animation: drift17 26s ease-in-out infinite; }
-        .td18 { width: 2px; height: 2px; top: 268px; left: 678px; animation: drift18 21s ease-in-out infinite; background: rgba(37,99,235,0.25); }
-
-        /* ── Extra ambient ── */
-        .td19 { width: 1px; height: 1px; top: 28px; left: 518px; animation: drift19 30s ease-in-out infinite; background: rgba(109,62,216,0.2); }
-        .td20 { width: 1px; height: 1px; top: 118px; left: 618px; animation: drift20 28s ease-in-out infinite; background: rgba(37,99,235,0.15); }
-        .td21 { width: 1px; height: 1px; top: 198px; left: 718px; animation: drift21 25s ease-in-out infinite; background: rgba(109,62,216,0.15); }
-        .td22 { width: 1px; height: 1px; top: 248px; left: 398px; animation: drift22 27s ease-in-out infinite; background: rgba(109,62,216,0.15); }
-
-        /* ── Drift keyframes ── */
-        @keyframes drift1  { 0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-18px)} }
-        @keyframes drift2  { 0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-15px)} }
-        @keyframes drift3  { 0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,18px)} }
-        @keyframes drift4  { 0%,100%{transform:translate(0,0)}50%{transform:translate(15px,-12px)} }
-        @keyframes drift5  { 0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-15px)} }
-        @keyframes drift6  { 0%,100%{transform:translate(0,0)}50%{transform:translate(-18px,15px)} }
-        @keyframes drift7  { 0%,100%{transform:translate(0,0)}50%{transform:translate(15px,-12px)} }
-        @keyframes drift8  { 0%,100%{transform:translate(0,0)}50%{transform:translate(-12px,18px)} }
-        @keyframes drift9  { 0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-15px)} }
-        @keyframes drift10 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,18px)} }
-        @keyframes drift11 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-12px,15px)} }
-        @keyframes drift12 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,18px)} }
-        @keyframes drift13 { 0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-15px)} }
-        @keyframes drift14 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-18px,15px)} }
-        @keyframes drift15 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-12px,18px)} }
-        @keyframes drift16 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,-12px)} }
-        @keyframes drift17 { 0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-15px)} }
-        @keyframes drift18 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,18px)} }
-        @keyframes drift19 { 0%,100%{transform:translate(0,0)}50%{transform:translate(15px,12px)} }
-        @keyframes drift20 { 0%,100%{transform:translate(0,0)}50%{transform:translate(-12px,15px)} }
-        @keyframes drift21 { 0%,100%{transform:translate(0,0)}50%{transform:translate(15px,-12px)} }
-        @keyframes drift22 { 0%,100%{transform:translate(0,0)}50%{transform:translate(15px,-10px)} }
-
-        .td1  { animation: drift1 18s ease-in-out infinite, pulse1 4s ease-in-out infinite; }
-        .td6  { animation: drift6 19s ease-in-out infinite, pulse2 3.5s ease-in-out infinite; }
-        .td9  { animation: drift9 20s ease-in-out infinite, pulse3 3s ease-in-out infinite; }
-        .td12 { animation: drift12 19s ease-in-out infinite, pulse1 4s ease-in-out infinite; }
-
-        @keyframes pulse1 { 0%,100%{opacity:0.4;box-shadow:0 0 8px rgba(109,62,216,0.2)}50%{opacity:0.7;box-shadow:0 0 15px rgba(109,62,216,0.35)} }
-        @keyframes pulse2 { 0%,100%{opacity:0.35;box-shadow:0 0 8px rgba(37,99,235,0.2)}50%{opacity:0.65;box-shadow:0 0 15px rgba(37,99,235,0.35)} }
-        @keyframes pulse3 { 0%,100%{opacity:0.4;box-shadow:0 0 10px rgba(109,62,216,0.2)}50%{opacity:0.75;box-shadow:0 0 20px rgba(109,62,216,0.35)} }
-
-        /* ══════ CONNECTION LINES ══════ */
-        .tl1  { top: 54px; left: 94px; width: 98px; background: linear-gradient(90deg, rgba(109,62,216,0.12), rgba(37,99,235,0.06)); transform: rotate(23deg); animation-delay: 0.3s; }
-        .tl2  { top: 94px; left: 184px; width: 90px; background: linear-gradient(90deg, rgba(37,99,235,0.10), rgba(109,62,216,0.05)); transform: rotate(-33deg); animation-delay: 0.4s; }
-        .tl3  { top: 54px; left: 94px; width: 138px; background: linear-gradient(90deg, rgba(109,62,216,0.08), rgba(109,62,216,0.03)); transform: rotate(66deg); animation-delay: 0.5s; }
-        .tl4  { top: 180px; left: 150px; width: 108px; background: linear-gradient(90deg, rgba(109,62,216,0.06), rgba(37,99,235,0.03)); transform: rotate(26deg); animation-delay: 0.6s; }
-        .tl5  { top: 45px; left: 260px; width: 120px; background: linear-gradient(90deg, rgba(109,62,216,0.08), rgba(109,62,216,0.03)); transform: rotate(43deg); animation-delay: 0.5s; }
-        .tl6  { top: 130px; left: 350px; width: 92px; background: linear-gradient(90deg, rgba(37,99,235,0.06), rgba(109,62,216,0.03)); transform: rotate(-50deg); animation-delay: 0.6s; }
-        .tl7  { top: 95px; left: 184px; width: 170px; background: linear-gradient(90deg, rgba(37,99,235,0.05), rgba(109,62,216,0.02)); transform: rotate(12deg); animation-delay: 0.7s; }
-        .tl8  { top: 180px; left: 150px; width: 142px; background: linear-gradient(90deg, rgba(109,62,216,0.05), rgba(37,99,235,0.02)); transform: rotate(21deg); animation-delay: 0.7s; }
-        .tl9  { top: 130px; left: 350px; width: 148px; background: linear-gradient(90deg, rgba(37,99,235,0.04), rgba(37,99,235,0.02)); transform: rotate(42deg); animation-delay: 0.8s; }
-
-        .tl10 { top: 50px; left: 780px; width: 96px; background: linear-gradient(90deg, rgba(109,62,216,0.12), rgba(37,99,235,0.06)); transform: rotate(24deg); animation-delay: 0.4s; }
-        .tl11 { top: 90px; left: 870px; width: 100px; background: linear-gradient(90deg, rgba(37,99,235,0.10), rgba(109,62,216,0.05)); transform: rotate(-30deg); animation-delay: 0.5s; }
-        .tl12 { top: 40px; left: 960px; width: 125px; background: linear-gradient(90deg, rgba(109,62,216,0.08), rgba(109,62,216,0.04)); transform: rotate(16deg); animation-delay: 0.5s; }
-        .tl13 { top: 90px; left: 870px; width: 92px; background: linear-gradient(90deg, rgba(37,99,235,0.08), rgba(37,99,235,0.03)); transform: rotate(60deg); animation-delay: 0.6s; }
-        .tl14 { top: 170px; left: 920px; width: 123px; background: linear-gradient(90deg, rgba(37,99,235,0.06), rgba(109,62,216,0.03)); transform: rotate(14deg); animation-delay: 0.7s; }
-        .tl15 { top: 75px; left: 1080px; width: 130px; background: linear-gradient(90deg, rgba(109,62,216,0.05), rgba(109,62,216,0.02)); transform: rotate(73deg); animation-delay: 0.7s; }
-        .tl16 { top: 50px; left: 780px; width: 198px; background: linear-gradient(90deg, rgba(109,62,216,0.04), rgba(109,62,216,0.02)); transform: rotate(73deg); animation-delay: 0.8s; }
-        .tl17 { top: 240px; left: 830px; width: 218px; background: linear-gradient(90deg, rgba(109,62,216,0.06), rgba(109,62,216,0.03)); transform: rotate(-10deg); animation-delay: 0.8s; }
-        .tl18 { top: 200px; left: 1040px; width: 100px; background: linear-gradient(90deg, rgba(109,62,216,0.04), rgba(37,99,235,0.02)); transform: rotate(36deg); animation-delay: 0.9s; }
-
-        .tl19 { top: 230px; left: 55px; width: 430px; background: linear-gradient(90deg, rgba(37,99,235,0.03), rgba(109,62,216,0.02), transparent); transform: rotate(4deg); animation-delay: 1.0s; }
-        .tl20 { top: 230px; left: 280px; width: 210px; background: linear-gradient(90deg, rgba(109,62,216,0.04), rgba(37,99,235,0.02)); transform: rotate(8deg); animation-delay: 1.0s; }
-        .tl21 { top: 260px; left: 480px; width: 210px; background: linear-gradient(90deg, rgba(109,62,216,0.05), rgba(37,99,235,0.02)); transform: rotate(3deg); animation-delay: 1.1s; }
-        .tl22 { top: 270px; left: 680px; width: 160px; background: linear-gradient(90deg, rgba(37,99,235,0.04), rgba(109,62,216,0.02)); transform: rotate(-12deg); animation-delay: 1.1s; }
-
-        /* ══════ GRADIENT MESH BG ══════ */
         .bg-mesh {
           position: absolute; width: 200%; height: 200%; top: -50%; left: -50%;
           background:
-            radial-gradient(ellipse 600px 300px at 20% 50%, rgba(99,102,241,0.05) 0%, transparent 70%),
-            radial-gradient(ellipse 500px 250px at 80% 30%, rgba(139,92,246,0.03) 0%, transparent 70%),
-            radial-gradient(ellipse 400px 200px at 60% 80%, rgba(59,130,246,0.03) 0%, transparent 70%);
+            radial-gradient(ellipse 600px 300px at 20% 50%, rgba(99,102,241,0.06) 0%, transparent 70%),
+            radial-gradient(ellipse 500px 250px at 80% 30%, rgba(139,92,246,0.04) 0%, transparent 70%),
+            radial-gradient(ellipse 400px 200px at 60% 80%, rgba(59,130,246,0.04) 0%, transparent 70%);
           animation: meshFloat 20s ease-in-out infinite;
         }
         @keyframes meshFloat {
@@ -133,124 +23,113 @@
           50% { transform: translate(-20px, 15px) rotate(-1deg); }
           75% { transform: translate(15px, 25px) rotate(0.5deg); }
         }
-
-        /* ══════ TITLE ══════ */
+        .grid {
+          position: absolute; width: 100%; height: 100%;
+          background-image:
+            linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+          background-size: 60px 60px;
+          animation: gridPulse 8s ease-in-out infinite;
+        }
+        @keyframes gridPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.7; } }
+        .particle {
+          position: absolute; width: 3px; height: 3px; border-radius: 50%;
+          background: rgba(99,102,241,0.3);
+        }
+        .p1 { top: 20%; left: 10%; animation: float1 12s ease-in-out infinite; }
+        .p2 { top: 60%; left: 25%; animation: float2 15s ease-in-out infinite; background: rgba(59,130,246,0.25); width: 2px; height: 2px; }
+        .p3 { top: 30%; left: 70%; animation: float3 10s ease-in-out infinite; background: rgba(99,102,241,0.35); width: 4px; height: 4px; }
+        .p4 { top: 75%; left: 85%; animation: float1 18s ease-in-out infinite reverse; background: rgba(168,85,247,0.2); }
+        .p5 { top: 45%; left: 50%; animation: float2 14s ease-in-out infinite; background: rgba(99,102,241,0.15); width: 5px; height: 5px; }
+        .p6 { top: 15%; left: 90%; animation: float3 16s ease-in-out infinite; background: rgba(59,130,246,0.3); width: 2px; height: 2px; }
+        .p7 { top: 80%; left: 40%; animation: float1 11s ease-in-out infinite; background: rgba(139,92,246,0.2); }
+        @keyframes float1 {
+          0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+          50% { transform: translate(40px, -30px); opacity: 1; }
+        }
+        @keyframes float2 {
+          0%, 100% { transform: translate(0, 0); opacity: 0.5; }
+          33% { transform: translate(-25px, 20px); opacity: 0.8; }
+          66% { transform: translate(30px, -15px); opacity: 0.3; }
+        }
+        @keyframes float3 {
+          0%, 100% { transform: translate(0, 0); opacity: 0.4; }
+          50% { transform: translate(-35px, 25px); opacity: 1; }
+        }
         .title-wrap { position: relative; z-index: 2; text-align: center; }
         .title-letters { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 20px; }
         .letter {
           font-size: 52px; font-weight: 700; color: #1a1a1a;
           letter-spacing: 0.05em; opacity: 0;
-          animation: letterReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          animation: letterReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
         .letter:nth-child(1) { animation-delay: 0.3s; }
-        .letter:nth-child(3) { animation-delay: 0.5s; }
-        .letter:nth-child(5) { animation-delay: 0.7s; }
-        .letter:nth-child(7) { animation-delay: 0.9s; }
-        .letter:nth-child(9) { animation-delay: 1.1s; }
-        .letter:nth-child(11) { animation-delay: 1.3s; }
-        .letter-inner {
-          display: inline-block;
-          background: linear-gradient(90deg, #1a1a1a 0%, #1a1a1a 40%, rgba(109,62,216,0.8) 50%, #1a1a1a 60%, #1a1a1a 100%);
-          background-size: 200% 100%;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          animation: shimmer 4s ease-in-out 2.5s infinite;
-        }
-        @keyframes shimmer {
-          0%, 100% { background-position: -100% 0; }
-          50% { background-position: 200% 0; }
-        }
+        .letter:nth-child(3) { animation-delay: 0.45s; }
+        .letter:nth-child(5) { animation-delay: 0.6s; }
+        .letter:nth-child(7) { animation-delay: 0.75s; }
+        .letter:nth-child(9) { animation-delay: 0.9s; }
+        .letter:nth-child(11) { animation-delay: 1.05s; }
         .dot {
-          font-size: 18px; color: rgba(109,62,216,0.5);
-          opacity: 0; animation: dotReveal 0.5s ease forwards;
+          font-size: 18px; color: rgba(99,102,241,0.5);
+          opacity: 0; animation: dotReveal 0.4s ease forwards;
         }
-        .dot:nth-child(2) { animation-delay: 0.4s; }
-        .dot:nth-child(4) { animation-delay: 0.6s; }
-        .dot:nth-child(6) { animation-delay: 0.8s; }
-        .dot:nth-child(8) { animation-delay: 1.0s; }
-        .dot:nth-child(10) { animation-delay: 1.2s; }
+        .dot:nth-child(2) { animation-delay: 0.38s; }
+        .dot:nth-child(4) { animation-delay: 0.53s; }
+        .dot:nth-child(6) { animation-delay: 0.68s; }
+        .dot:nth-child(8) { animation-delay: 0.83s; }
+        .dot:nth-child(10) { animation-delay: 0.98s; }
         @keyframes letterReveal {
-          0% { opacity: 0; transform: translateY(30px) scale(0.8); filter: blur(10px); }
-          60% { opacity: 1; transform: translateY(-5px) scale(1.02); filter: blur(0); }
-          100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+          from { opacity: 0; transform: translateY(30px) scale(0.8); filter: blur(10px); }
+          to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
         }
         @keyframes dotReveal {
-          from { opacity: 0; transform: scale(0) rotate(-180deg); }
-          to { opacity: 1; transform: scale(1) rotate(0deg); }
+          from { opacity: 0; transform: scale(0); }
+          to { opacity: 1; transform: scale(1); }
         }
-        .accent-line {
-          width: 0; height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(109,62,216,0.5), transparent);
-          margin: 16px auto;
-          animation: lineExpand 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards;
-        }
-        @keyframes lineExpand { to { width: 240px; } }
         .subtitle {
           font-family: 'JetBrains Mono', monospace; font-size: 14px;
           color: rgba(0,0,0,0.35); letter-spacing: 0.3em;
           text-transform: uppercase; opacity: 0;
-          animation: fadeSlideUp 1s ease 1.8s forwards;
-          display: flex; align-items: center; justify-content: center; gap: 4px;
+          animation: fadeSlideUp 1s ease 1.4s forwards;
         }
-        .cursor {
-          display: inline-block; width: 2px; height: 14px;
-          background: rgba(109,62,216,0.5);
-          animation: blink 1s step-end infinite;
-          margin-left: 4px;
-        }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(15px); }
           to { opacity: 1; transform: translateY(0); }
         }
+        .accent-line {
+          width: 0; height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(99,102,241,0.4), transparent);
+          margin: 16px auto;
+          animation: lineExpand 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+        }
+        @keyframes lineExpand { to { width: 200px; } }
       </style>
-
       <div class="container">
         <div class="bg-mesh"></div>
-
-        <div class="tangle">
-          <div class="tl tl1"></div><div class="tl tl2"></div><div class="tl tl3"></div>
-          <div class="tl tl4"></div><div class="tl tl5"></div><div class="tl tl6"></div>
-          <div class="tl tl7"></div><div class="tl tl8"></div><div class="tl tl9"></div>
-          <div class="tl tl10"></div><div class="tl tl11"></div><div class="tl tl12"></div>
-          <div class="tl tl13"></div><div class="tl tl14"></div><div class="tl tl15"></div>
-          <div class="tl tl16"></div><div class="tl tl17"></div><div class="tl tl18"></div>
-          <div class="tl tl19"></div><div class="tl tl20"></div><div class="tl tl21"></div>
-          <div class="tl tl22"></div>
-
-          <div class="td star td1"></div><div class="td td2"></div>
-          <div class="td td3"></div><div class="td star td4"></div>
-          <div class="td td5"></div><div class="td star td6"></div>
-          <div class="td td7"></div><div class="td td8"></div>
-          <div class="td star td9"></div><div class="td td10"></div>
-          <div class="td td11"></div><div class="td star td12"></div>
-          <div class="td td13"></div><div class="td td14"></div>
-          <div class="td td15"></div><div class="td td16"></div>
-          <div class="td td17"></div><div class="td td18"></div>
-          <div class="td td19"></div><div class="td td20"></div>
-          <div class="td td21"></div><div class="td td22"></div>
-        </div>
-
+        <div class="grid"></div>
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
+        <div class="particle p4"></div>
+        <div class="particle p5"></div>
+        <div class="particle p6"></div>
+        <div class="particle p7"></div>
         <div class="title-wrap">
           <div class="title-letters">
-            <span class="letter"><span class="letter-inner">A</span></span>
+            <span class="letter">A</span>
             <span class="dot">&#183;</span>
-            <span class="letter"><span class="letter-inner">V</span></span>
+            <span class="letter">V</span>
             <span class="dot">&#183;</span>
-            <span class="letter"><span class="letter-inner">E</span></span>
+            <span class="letter">E</span>
             <span class="dot">&#183;</span>
-            <span class="letter"><span class="letter-inner">L</span></span>
+            <span class="letter">L</span>
             <span class="dot">&#183;</span>
-            <span class="letter"><span class="letter-inner">Y</span></span>
+            <span class="letter">Y</span>
             <span class="dot">&#183;</span>
-            <span class="letter"><span class="letter-inner">X</span></span>
+            <span class="letter">X</span>
           </div>
           <div class="accent-line"></div>
-          <div class="subtitle">
-            ai builder &#183; cloud architect &#183; designer
-            <span class="cursor"></span>
-          </div>
+          <div class="subtitle">ai builder &#183; cloud architect &#183; designer</div>
         </div>
       </div>
     </div>

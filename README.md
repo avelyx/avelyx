@@ -70,7 +70,7 @@ I build AI systems that generate production-ready websites, automate cloud infra
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./projects.svg">
   <source media="(prefers-color-scheme: light)" srcset="./projects-light.svg">
-  <img src="./projects.svg" alt="projects" width="100%">
+  <img src="./projects.svg" alt="projects" width="900">
 </picture>
 </div>
 
@@ -82,18 +82,15 @@ I build AI systems that generate production-ready websites, automate cloud infra
 
 <div align="center">
 
-**`>_ metrics`**
+**`>_ system monitor`**
 
 <br>
 
-<p>
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=avelyx&show_icons=true&hide_border=true&bg_color=00000000&title_color=8b5cf6&text_color=888888&icon_color=8b5cf6&ring_color=8b5cf6&count_private=true&include_all_commits=true" />
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=avelyx&hide_border=true&background=00000000&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=888888&currStreakNum=FFFFFF&sideNums=888888&dates=555555&stroke=00000000" />
-</p>
-
-<br>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=avelyx&bg_color=00000000&color=888888&line=8b5cf6&point=ffffff&area=true&area_color=8b5cf680&hide_border=true&custom_title=contribution%20timeline" width="96%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./terminal-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./terminal-light.svg">
+  <img src="./terminal-dark.svg" alt="system monitor" width="900">
+</picture>
 
 </div>
 
